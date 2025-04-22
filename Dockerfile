@@ -1,4 +1,4 @@
-FROM rust:1.86 as builder
+FROM rust:1.86 AS builder
 
 WORKDIR /usr/src/app
 
@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy the binary from builder
-COPY --from=builder /usr/src/app/target/release/phishing_simulation_server .
+COPY --from=builder /usr/src/app/target/release/phishing_email .
 
 EXPOSE 8080
-CMD ["./phishing_simulation_server"]
+CMD ["./phishing_email"]
