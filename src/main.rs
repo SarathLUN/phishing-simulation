@@ -138,7 +138,7 @@ async fn main() -> std::io::Result<()> {
     init_database(&pool);
 
     // Start the server
-    let port = env::var("PORT").unwrap_or_else(|_| "8080".to_string());
+    let port = env::var("PORT").unwrap_or_else(|_| "80".to_string());
     let host = env::var("HOST").unwrap_or_else(|_| "127.0.0.1".to_string());
     let bind_address = format!("{}:{}", host, port);
 
@@ -150,7 +150,7 @@ async fn main() -> std::io::Result<()> {
                 pool: Mutex::new(pool.clone()),
             }))
             .route("/free-rides", web::get().to(landing_page))
-            .route("/admin/stats", web::get().to(admin_stats))
+
     })
         .bind(bind_address)?
         .run()

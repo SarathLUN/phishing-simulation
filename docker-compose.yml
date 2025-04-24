@@ -26,10 +26,10 @@ services:
       db:
         condition: service_healthy
     ports:
-      - "8080:8080"
+      - "80:80"
     environment:
       - DATABASE_URL=mysql://phishuser:phishpass@db:3306/phishing_sim
-      - PORT=8080
+      - PORT=80
       - HOST=0.0.0.0
     networks:
       - app-network
