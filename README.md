@@ -7,8 +7,8 @@
 
    - clone source code
    ```shell
-    > git clone
-    > cd ...
+    > git clone git@github.com:SarathLUN/phishing-simulation.git 
+    > cd phishing-simulation/
     ``` 
    - start with docker-compose as background services
    ```shell
