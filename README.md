@@ -1,6 +1,10 @@
 # Simulation on Email Phishing
 
-1. Prerequisite
+1. Features:
+    - [ ] import email addresses of the targets (can be done manually).
+    - [ ] generate and email to the targets (can be done manually).
+    - [X] capture the clicks.
+2. Prerequisite:
     - docker engine, can be verified by `docker --version`
     - docker-compose, can be verified by `docker-compose --version`
 2. Installation
